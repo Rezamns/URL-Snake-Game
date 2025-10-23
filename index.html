@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL SNAKE GAME</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image" href="./assets/img/title-icon.ico">
+    <script data-goatcounter="https://demian.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <script>
+        if ('ontouchstart' in document.documentElement) {
+            document.documentElement.classList.add('touch')
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="main">
+        <noscript>⚠ Sorry, this game requires JavaScript.</noscript>
+        <div style="display: none;" id=url-container class=invisible>URL: <span id=url></span></div>
+        <div class=expandable>
+            <button class="help-toggle expand-btn" aria-label=Help>HELP</button>
+            <div class="expandable-content hidden">
+                <span class=no-touch-only>Use the arrow keys or WASD to control the snake on the URL.</span>
+                <span class=touch-only>Use the arrows to control the snake on the URL.</span>
+                <a id=reveal-url href=#></a><span id=url-escaping-note class=invisible>
+                    <span id=replacement-char-description>
+                    </span></span>.&nbsp;<button class=collapse-btn aria-label=Hide>〈</button>
+            </div>
+        </div><br>
+        <div id=max-score-container class="expandable hidden">
+            <button class="high-score-toggle expand-btn" aria-label="Max score">SCORE</button>
+            <div class="expandable-content hidden">
+                Your highest score is <span id=max-score-points></span>!
+                <span id=max-score-grid></span><a id=share href=#></a>&nbsp;<button class=collapse-btn
+                    aria-label=Hide>〈</button><span id=share-note class=invisible></span>
+            </div>
+        </div>
+        <div class="controls touch-only">
+            <button id=up>▲&#xFE0E;</button>
+            <button id=left>◀&#xFE0E;</button>
+            <button id=down>▼&#xFE0E;</button>
+            <button id=right>▶&#xFE0E;</button>
+        </div>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large footer">
+        Powered by <a class="footertext" href="#">Reza-Mns</a>
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+
+</html>
